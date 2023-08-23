@@ -68,4 +68,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Withdraw::class, 'user_id');
     }
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'user_id');
+    }
 }

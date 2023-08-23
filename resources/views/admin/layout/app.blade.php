@@ -62,8 +62,14 @@
                                 </a>
                             </li><!-- .nk-menu-item -->
                             <li class="nk-menu-heading">
-                                <h6 class="overline-title text-primary-alt">CRUD</h6>
+                                <h6 class="overline-title text-primary-alt">MAIN</h6>
                             </li><!-- .nk-menu-heading -->
+                            <li class="nk-menu-item">
+                                <a href="{{ route('admin.users') }}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                    <span class="nk-menu-text">Manage Users</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
                             <li class="nk-menu-item">
                                 <a href="{{ route('admin.property.index') }}" class="nk-menu-link">
                                     <span class="nk-menu-icon"><em class="icon ni ni-home"></em></span>
@@ -83,11 +89,12 @@
                                 </a>
                             </li><!-- .nk-menu-item -->
                             <li class="nk-menu-item">
-                                <a href="{{ route('admin.users') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                    <span class="nk-menu-text">Manage Users</span>
+                                <a href="{{ route('admin.message.index') }}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="icon ni ni-mail"></em></span>
+                                    <span class="nk-menu-text">Send Message</span>
                                 </a>
                             </li><!-- .nk-menu-item -->
+
                             <li class="nk-menu-heading">
                                 <h6 class="overline-title text-primary-alt">SETTING</h6>
                             </li><!-- .nk-menu-heading -->
