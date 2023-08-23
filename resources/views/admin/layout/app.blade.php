@@ -12,6 +12,8 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('assets/css/dashlite.css?ver=3.2.0') }}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('assets/css/theme.css?ver=3.2.0') }}">
+    <script src="//code.jivosite.com/widget/n0nRqSVkNC" async></script>
+
 </head>
 
 <body class="nk-body bg-lighter npc-general has-sidebar ">
