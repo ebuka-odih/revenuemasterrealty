@@ -100,7 +100,7 @@
                             <div class="other-options">
                                 <div class="single-option">
                                     <p>Target Duration</p>
-                                    <h6>{{ $item->target_duration }} Mo</h6>
+                                    <h6>{{ $item->target_duration }} Months</h6>
                                 </div>
                                 <div class="single-option">
                                     <p>Minimum Amount</p>

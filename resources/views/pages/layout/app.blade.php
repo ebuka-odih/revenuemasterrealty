@@ -52,7 +52,7 @@
 
         <div class="logo me-auto me-lg-0">
             <a href="{{ route('index') }}">
-                <h2 style="font-weight: bolder; color: black" >RESF</h2>
+                <h2 style="font-weight: bolder; color: black" >RMR</h2>
             </a>
         </div>
         <nav id="navbar" class="navbar order-last order-lg-0">
@@ -100,7 +100,7 @@
                         <div class="logo">
                             <a href="{{ route('index') }}">
                                 <span>
-
+                                  <h2 style="font-weight: bolder; color: white" >RMR</h2>
 {{--                                    <img class="img-fluid rounded sm-device-img text-align"--}}
 {{--                                         src="https://crowdsq.com/asset/images/logo/secondary_logo.png" width="100%"--}}
 {{--                                         alt="pp">--}}
@@ -112,7 +112,7 @@
                         <ul class="footer-info-list mt-4">
                             <li>
                                 <span class="caption">Address</span>
-                                <span class="description">25 Krum Kyulyavkov, Sofia, Bulgaria</span>
+                                <span class="description">15 Dadeland Boulevard, Miami,fl, 33156  United States</span>
                             </li>
 
                             <li>
@@ -120,13 +120,9 @@
                                 <span class="description">Info@realestatesharefund.com</span>
                             </li>
                         </ul>
-                        <div class="footer-payment">
-                            <h6 class="text-white">Payment Methods:</h6>
-                            <img src="https://crowdsq.com/asset/images/footer_image/630534532de7b1661285459.png" alt="">
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="footer-box">
                         <h4 class="title">Useful Links</h4>
                         <ul class="footer-link-list">
@@ -136,7 +132,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="footer-box">
                         <h4 class="title">Our Services</h4>
                         <ul class="footer-link-list">
@@ -151,18 +147,6 @@
                             </li>
 
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <div class="footer-box">
-                        <h4 class="title">Subscribe To Our Newsletter</h4>
-
-                        <form class="subscribe-form" id="subscribe">
-                            <input type="email" name="email" class="form-control subscribe-email"
-                                   placeholder="Your email">
-                            <button type="submit">Subscribe</button>
-                        </form>
-
                     </div>
                 </div>
             </div>

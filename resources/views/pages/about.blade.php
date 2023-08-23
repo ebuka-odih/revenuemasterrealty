@@ -8,7 +8,7 @@
             <div class="d-flex justify-content-between align-items-center text-capitalize">
                 <h2>About</h2>
                 <ol>
-                    <li><a href="https://crowdsq.com">Home</a></li>
+                    <li><a href="{{ route('index') }}">Home</a></li>
                     <li>About</li>
                 </ol>
             </div>
@@ -51,7 +51,7 @@
                         </div>
                         <div class="content">
                             <h5 class="title">Alignment Of Interests</h5>
-                            <p>We Do All That We Can To Identify And Offer To You The Best Properties On The Market. W Understand That If You Obtain A Good Return On Your Investment And Are Satisfied, You Are More Likely To Continue Using Crowd Square And Pay For Our Services.</p>
+                            <p>We Do All That We Can To Identify And Offer To You The Best Properties On The Market. W Understand That If You Obtain A Good Return On Your Investment And Are Satisfied, You Are More Likely To Continue Using Revenue Master Realty And Pay For Our Services.</p>
                         </div>
                     </div>
 
@@ -65,7 +65,6 @@
                         </div>
                     </div>
 
-                    <a href="https://crowdsq.com/about" class="cmn-btn mt-4">Know More</a>
                 </div>
             </div>
         </div>
@@ -84,7 +83,7 @@
                         <div class="accordion-item">
                             <h4 class="accordion-header" id="heading-1">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseSix">
-                                    Can I Use The Platform If I Am Not From Bulgaria?
+                                    Can I Use The Platform If I Am Not From USA?
                                 </button>
                             </h4>
                             <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#accordionExample">
@@ -113,7 +112,7 @@
                             </h4>
                             <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p> Currently, The Rental Yield On Residential Real Estate In Sofia Is Around 4% And 7 % On Commercial (in EUR).</p>
+                                    <p> Currently, The Rental Yield On Residential Real Estate In Miami Is Around 4% And 7 % On Commercial (in EUR).</p>
                                 </div>
                             </div>
                         </div>
