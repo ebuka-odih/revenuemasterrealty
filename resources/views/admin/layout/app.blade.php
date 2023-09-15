@@ -96,6 +96,12 @@
                                     <span class="nk-menu-text">Send Message</span>
                                 </a>
                             </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{{ route('admin.testimony.index') }}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="icon ni ni-mic"></em></span>
+                                    <span class="nk-menu-text">Testimonies</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
 
                             <li class="nk-menu-heading">
                                 <h6 class="overline-title text-primary-alt">SETTING</h6>

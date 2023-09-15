@@ -23,6 +23,13 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
+    protected function authenticated()
+    {
+        if ( Auth::user() &&  Auth::user()->admin == 1) {
+            return redirect()->route('admin.dashboard');
+        }
+
+    }
 
     public function store(LoginRequest $request): RedirectResponse
     {

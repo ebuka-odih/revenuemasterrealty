@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('avatar')->nullable();
-            $table->string('name')->nullable();
+            $table->string('username')->nullable();
+            $table->string('country')->nullable();
             $table->string('message')->nullable();
         });
     }
