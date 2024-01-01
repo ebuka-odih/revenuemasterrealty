@@ -52,7 +52,7 @@
             border-radius: 0.5rem !important;
         }
     </style>
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4bd7f445-54e1-48f2-a215-22bd382330a9";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    
 </head>
 <body>
 
