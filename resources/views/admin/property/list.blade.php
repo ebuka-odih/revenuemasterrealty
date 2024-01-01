@@ -43,11 +43,12 @@
                                     <div class="nk-block-head-content">
                                         <div class="toggle-wrap nk-block-tools-toggle">
                                             <div class="" data-content="pageMenu">
+                                                <a href="{{ route('admin.property.create') }}" class=" btn btn-primary "><em class="icon ni ni-plus"></em><span>Add Property</span></a>
+
                                                 <ul class="nk-block-tools g-3">
 
                                                     <li class="nk-block-tools-opt">
-                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDefault" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
-                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDefault" class="toggle btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Add Property</span></a>
+{{--                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalDefault" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>--}}
                                                     </li>
                                                 </ul>
                                             </div>

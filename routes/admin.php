@@ -4,8 +4,6 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminDepositController;
 use App\Http\Controllers\Admin\AdminFundingController;
 use App\Http\Controllers\Admin\AdminImageController;
-use App\Http\Controllers\Admin\AdminMessageController;
-use App\Http\Controllers\Admin\AdminTestimonyController;
 use App\Http\Controllers\Admin\AdminWithdrawalController;
 use App\Http\Controllers\Admin\PaymentMethodController;
 use App\Http\Controllers\Admin\PropertyController;
@@ -24,8 +22,6 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::resource('property', PropertyController::class);
     Route::resource('payment-method', PaymentMethodController::class);
     Route::resource('funding', AdminFundingController::class);
-    Route::resource('message', AdminMessageController::class);
-    Route::resource('testimony', AdminTestimonyController::class);
 
     Route::get('deposits', [AdminDepositController::class, 'deposits'])->name('deposits');
     Route::get('approve/deposit/{id}', [AdminDepositController::class, 'acceptDeposit'])->name('acceptDeposit');
@@ -38,4 +34,5 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
 
     Route::get('image/{id}', [AdminImageController::class, 'image'])->name('image');
     Route::post('storeImage/', [AdminImageController::class, 'storeImage'])->name('storeImage');
+    Route::delete('delete/image/{id}', [AdminImageController::class, 'deleteImage'])->name('deleteImage');
 });

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\InvestController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\TransactionsController;
@@ -20,10 +21,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [InvestController::class, 'home'])->name('index');
-Route::get('/properties', [InvestController::class, 'properties'])->name('properties');
+Route::view('/', 'pages.index')->name('index');
+Route::view('/how-it-works', 'pages.how-it-works')->name('how_it_works');
+Route::view('/offerings', 'pages.offerings')->name('offerings');
+Route::view('/why-real-estate', 'pages.why-real-estate')->name('why_realestate');
+Route::view('/premier-offerings', 'pages.premier-offerings')->name('premier-offerings');
 Route::view('/about', 'pages.about')->name('about');
-Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/independent', 'pages.independent')->name('independent');
+Route::view('/terms-of-service', 'pages.terms-of-service')->name('terms-of-service');
+
+
+Route::get('/properties', [PageController::class, 'properties'])->name('properties');
+Route::get('/property/details/{id}', [PageController::class, 'details'])->name('pro.details');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -58,7 +67,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
     Route::get('history/deposit', [TransactionsController::class, 'depositHistory'])->name('depositHistory');
     Route::get('history/withdraw', [TransactionsController::class, 'withdrawalHistory'])->name('withdrawalHistory');
     Route::get('history/funding', [TransactionsController::class, 'fundingHistory'])->name('fundingHistory');
-
     Route::post('property/invest', [InvestController::class, 'invest'])->name('invest');
 
 

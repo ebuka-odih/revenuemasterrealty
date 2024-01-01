@@ -32,6 +32,11 @@
                                         {{ session()->get('success') }}
                                     </div>
                                 @endif
+                                    @if(session()->has('error'))
+                                    <div class="alert alert-danger">
+                                        {{ session()->get('error') }}
+                                    </div>
+                                @endif
                                 @if(session()->has('updated'))
                                     <div class="alert alert-success">
                                         {{ session()->get('updated') }}
@@ -84,7 +89,7 @@
                                                       <div class="form-group">
                                                           <label class="form-label mt-2" for="full-name">Image</label>
                                                           <div class="form-control-wrap">
-                                                              <input type="file" class="form-control" name="image" value="{{ old('image') }}" id="full-name">
+                                                              <input type="file" class="form-control" name="image[]" id="full-name" multiple required="">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -99,14 +104,33 @@
                                       </form>
 
                                       <br>
+                                      <hr>
 
-                                      @if ($property->images->count() > 0)
-                                          @foreach ($property->images as $image)
-                                              <img height="150" width="150" src="{{ asset($image->image_path) }}" alt="Product Image">
-                                          @endforeach
-                                      @else
-                                          <p>No images available for this product.</p>
-                                      @endif
+
+                                              <div class="row">
+                                                  @if ($property->images->count() > 0)
+                                                      @foreach ($property->images as $image)
+                                                  <div class="col-3">
+                                                      <img height="150" width="150" src="{{ asset($image->image_path) }}" alt="Product Image">
+
+                                                      <form method="POST" class="mt-2" action="{!! route('admin.deleteImage', $image->id) !!}" accept-charset="UTF-8">
+                                                          <input name="_method" value="DELETE" type="hidden">
+                                                          {{ csrf_field() }}
+
+                                                          <div class="btn-group btn-group-xs pull-right" role="group">
+                                                              <button data-toggle="tooltip" data-placement="top" type="submit" class="btn btn-sm btn-danger" onclick="return confirm(&quot;Delete Item?&quot;)">
+                                                                  <span class="fa flaticon-delete" aria-hidden="true"></span>Delete
+                                                              </button>
+                                                          </div>
+                                                      </form>
+                                                  </div>
+                                                      @endforeach
+                                                  @else
+                                                      <p>No images available for this product.</p>
+                                                  @endif
+                                              </div>
+
+
 
 
                                   </div>

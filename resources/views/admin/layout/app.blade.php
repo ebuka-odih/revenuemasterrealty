@@ -12,8 +12,6 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('assets/css/dashlite.css?ver=3.2.0') }}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('assets/css/theme.css?ver=3.2.0') }}">
-    <script src="//code.jivosite.com/widget/n0nRqSVkNC" async></script>
-
 </head>
 
 <body class="nk-body bg-lighter npc-general has-sidebar ">
@@ -29,7 +27,7 @@
                 </div>
                 <div class="nk-sidebar-brand">
                     <a href="{{ route('index') }}" class="logo-link nk-sidebar-logo">
-                       <h3 class="text-primary">{{ env('APP_NAME') }}</h3>
+                       <h3 class="text-primary">RESF</h3>
                     </a>
                 </div>
             </div><!-- .nk-sidebar-element -->
@@ -64,14 +62,8 @@
                                 </a>
                             </li><!-- .nk-menu-item -->
                             <li class="nk-menu-heading">
-                                <h6 class="overline-title text-primary-alt">MAIN</h6>
+                                <h6 class="overline-title text-primary-alt">CRUD</h6>
                             </li><!-- .nk-menu-heading -->
-                            <li class="nk-menu-item">
-                                <a href="{{ route('admin.users') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                    <span class="nk-menu-text">Manage Users</span>
-                                </a>
-                            </li><!-- .nk-menu-item -->
                             <li class="nk-menu-item">
                                 <a href="{{ route('admin.property.index') }}" class="nk-menu-link">
                                     <span class="nk-menu-icon"><em class="icon ni ni-home"></em></span>
@@ -91,18 +83,11 @@
                                 </a>
                             </li><!-- .nk-menu-item -->
                             <li class="nk-menu-item">
-                                <a href="{{ route('admin.message.index') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-mail"></em></span>
-                                    <span class="nk-menu-text">Send Message</span>
+                                <a href="{{ route('admin.users') }}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                    <span class="nk-menu-text">Manage Users</span>
                                 </a>
                             </li><!-- .nk-menu-item -->
-                            <li class="nk-menu-item">
-                                <a href="{{ route('admin.testimony.index') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-mic"></em></span>
-                                    <span class="nk-menu-text">Testimonies</span>
-                                </a>
-                            </li><!-- .nk-menu-item -->
-
                             <li class="nk-menu-heading">
                                 <h6 class="overline-title text-primary-alt">SETTING</h6>
                             </li><!-- .nk-menu-heading -->

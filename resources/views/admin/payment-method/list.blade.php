@@ -129,5 +129,153 @@
     </div>
 
 
+    <!-- Modal  -->
+    <div class="modal fade" tabindex="-1" id="modalDefault">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Property</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <em class="icon ni ni-cross"></em>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('admin.property.store') }}" method="POST">
+                        @csrf
+
+
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Name</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" name="name" value="{{ old('name') }}" class="form-control" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Price</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" name="price" value="{{ old('price') }}" class="form-control" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Rooms</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="rooms" value="{{ old('rooms') }}" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Floor</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="floor" value="{{ old('floor') }}" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Building Year</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="building_year" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Square Meter</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="square_meter" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Location</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="building_location" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label mt-2" for="full-name">Description</label>
+                            <div class="form-control-wrap">
+                                <textarea class="form-control" name="description"  id="" cols="30" rows="5">{{ old('description') }}</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Min Price</label>
+                                    <div class="form-control-wrap">
+                                        <input type="number" class="form-control" name="min_price" value="{{ old('min_price') }}" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Return Rate</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="return_rate" value="{{ old('return_rate') }}" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Return For</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="return_for" value="{{ old('return_for') }}" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="cap">Capital Return</label>
+                                    <div class="form-control-wrap">
+                                        <select name="capital_back" id="cap" class="form-control">
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label mt-2" for="full-name">Target Duration</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="target_duration" value="{{ old('target_duration') }}" id="full-name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-2">
+                            <div class="form-group">
+                                <label class="form-label mt-2" for="full-name">Images</label>
+                                <div class="form-control-wrap">
+                                    <input type="file" class="form-control" name="target_duration" value="{{ old('target_duration') }}" id="full-name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 

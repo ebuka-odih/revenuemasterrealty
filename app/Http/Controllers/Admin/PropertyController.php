@@ -18,7 +18,7 @@ class PropertyController extends Controller
 
    public function create()
    {
-
+        return view('admin.property.create');
    }
 
    public function store(Request $request)
@@ -62,6 +62,7 @@ class PropertyController extends Controller
            'min_price' => 'required',
            'return_rate' => 'nullable',
            'capital_back' => 'nullable',
+           'return_for' => 'nullable',
            'target_duration' => 'nullable',
            'rooms' => 'nullable',
            'floor' => 'nullable',

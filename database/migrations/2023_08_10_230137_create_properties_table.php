@@ -29,10 +29,12 @@ return new class extends Migration
             $table->string('type')->nullable();
             $table->integer('reviews')->nullable();
             $table->string('rooms')->nullable();
+            $table->string('bathroom')->nullable();
             $table->string('floor')->nullable();
             $table->string('building_year')->nullable();
             $table->string('square_meter')->nullable();
             $table->string('building_location')->nullable();
+            $table->string('address')->nullable();
             $table->longText('description')->nullable();
         });
     }

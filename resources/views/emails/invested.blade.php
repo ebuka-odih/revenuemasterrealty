@@ -1,7 +1,6 @@
 <x-mail::message>
-# Introduction
 
-Dear {{ $data['user']->name }},
+# Hello {{ $data['user']->name }},
 
 We're excited to extend our warmest congratulations on your recent investment in {{ $data['invest']->transId() }} through
     {{ env('APP_NAME') }}! <br>

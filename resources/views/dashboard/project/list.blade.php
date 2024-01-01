@@ -15,14 +15,15 @@
                                 <div class="col-md-5 col-xxl-12">
                                     <div class="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
 
-                                        @foreach ($item->images as $image)
-                                            @if($loop->first)
-                                                <div class="new-arrivals-img-contnent">
-                                                    <img class="img-fluid" src="{{ asset($image->image_path) }}" alt="">
-                                                </div>
-
-                                            @endif
-                                        @endforeach
+                                        <a href="{{ route('user.projectDetail', $item->id) }}">
+                                            @foreach ($item->images as $image)
+                                                @if($loop->first)
+                                                    <div class="new-arrivals-img-contnent">
+                                                        <img class="img-fluid" src="{{ asset($image->image_path) }}" alt="">
+                                                    </div>
+                                                @endif
+                                            @endforeach
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-md-7 col-xxl-12">
@@ -30,13 +31,13 @@
                                         <h4><a href="{{ route('user.projectDetail', $item->id) }}">{{ $item->name }}</a></h4>
                                         <div class="comment-review star-rating">
                                             @if($item->reviews > 3)
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star-half-empty"></i></li>
-                                                <li><i class="fa fa-star-half-empty"></i></li>
-                                            </ul>
+                                                <ul>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star-half-empty"></i></li>
+                                                    <li><i class="fa fa-star-half-empty"></i></li>
+                                                </ul>
                                             @else
                                                 <ul>
                                                     <li><i class="fa fa-star"></i></li>
@@ -54,7 +55,7 @@
                                         <p><i class="fa fa-location-arrow"></i> Location: <span class="item">{{ $item->building_location }}</span></p>
 
                                         <p class="text-content">
-                                            {{ $item->description  }}
+                                            {{ Str::limit($item->description, $limit = 100, $end = '...') }}
                                         </p>
                                     </div>
                                 </div>

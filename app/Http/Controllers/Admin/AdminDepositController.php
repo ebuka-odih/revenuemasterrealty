@@ -21,7 +21,7 @@ class AdminDepositController extends Controller
     {
        $deposit = Deposit::findOrFail($id);
        $user = User::findOrFail($deposit->user_id);
-       $user->balance += $deposit->amoun;
+       $user->balance += $deposit->amount;
        $deposit->status = 1;
        $user->save();
        $deposit->save();

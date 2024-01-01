@@ -29,7 +29,9 @@
                                     <div class="tab-pane fade active show" id="home1" role="tabpanel">
                                         <div class="pt-4">
                                             <h4>Request for bank transfer details</h4>
-                                            <p>Our support will contact you via your email below for our bank transfer details</p>
+                                            <p>
+                                                Kindly send an email to our support service team to request for the current bank account information for your deposit with the email below
+                                            </p>
                                             @if(session()->has('success'))
                                                 <div class="alert alert-success">
                                                     {{ session()->get('success') }}
@@ -37,10 +39,10 @@
                                             @endif
                                             <form action="{{ route('user.requestBankinfo') }}" method="POST">
                                                 @csrf
-                                                <input type="text" name="user_email" class="form-control col-lg-6" value="{{ auth()->user()->email }}" readonly>
-                                                <div class="mt-2">
-                                                    <button type="submit" class="btn btn-sm btn-primary">Send</button>
-                                                </div>
+                                                <input type="text" name="user_email" class="form-control col-lg-6" value="info@realestatesharefund.com" readonly>
+{{--                                                <div class="mt-2">--}}
+{{--                                                    <button type="submit" class="btn btn-sm btn-primary">Send</button>--}}
+{{--                                                </div>--}}
                                             </form>
                                         </div>
                                     </div>

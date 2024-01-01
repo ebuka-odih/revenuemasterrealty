@@ -44,6 +44,7 @@
                                                         @endif
                                                         <div class="mb-3">
                                                             <select name="payment_methods_id" class="has-arrow form-control" id="" required>
+                                                                <option disabled selected>Select Wallet</option>
                                                                 @foreach($p_method as $item)
                                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                                 @endforeach

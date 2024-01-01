@@ -35,7 +35,7 @@
                                 <div class="text-center mb-3">
                                     <a href="{{ route('index')  }}">
                                         {{--                                        <img src="images/logo-full.png" alt="">--}}
-                                        <h2 style="font-weight: bolder; color: #5e5ee5" >RESF</h2>
+                                        <h2 style="font-weight: bolder; color: #5e5ee5" >DiversyFund</h2>
                                     </a>
                                 </div>
                                 <h4 class="text-center mb-4">Sign Up</h4>

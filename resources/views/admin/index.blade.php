@@ -30,7 +30,7 @@
                                             </div>
                                         </div>
                                         <div class="card-amount">
-                                        <span class="amount"> 49,595.34 <span class="currency currency-usd">USD</span>
+                                        <span class="amount"> @money($deposit) <span class="currency currency-usd">USD</span>
                                         </span>
                                         </div>
                                         <div class="invest-data">
@@ -56,7 +56,7 @@
                                             </div>
                                         </div>
                                         <div class="card-amount">
-                                        <span class="amount"> 49,595.34 <span class="currency currency-usd">USD</span>
+                                        <span class="amount"> @money($withdrawal) <span class="currency currency-usd">USD</span>
                                         </span>
                                         </div>
                                         <div class="invest-data">
@@ -82,7 +82,7 @@
                                             </div>
                                         </div>
                                         <div class="card-amount">
-                                            <span class="amount"> 79,358.50 <span class="currency currency-usd">USD</span>
+                                            <span class="amount"> @money($invested) <span class="currency currency-usd">USD</span>
                                             </span>
                                         </div>
                                         <div class="invest-data">

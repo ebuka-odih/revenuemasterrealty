@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="map-area">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.530496323877!2d-80.31598652417625!3d25.68685401169295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c7a45e342881%3A0x10a159590d6fe9fc!2s8905%20Dadeland%20Blvd%2C%20Kendall%2C%20FL%2033156%2C%20USA!5e0!3m2!1sen!2sde!4v1692805861802!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.025320348499!2d23.347253314993587!3d42.66081882404823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa84317392061b%3A0xf59d528f0c3227b3!2z0YPQuy4g4oCe0JrRgNGD0Lwg0JrRjtC70Y_QstC60L7QsuKAnCAyNSwgMTE3MiDQti7Qui4g0JTQuNCw0L3QsNCx0LDQtCwg0KHQvtGE0LjRjw!5e0!3m2!1sen!2sen!4v1668940836873!5m2!1sen!2sen" frameborder="0" allowfullscreen=""></iframe>
                     </div>
                     <div class="contact-area">
                         <h2 class="section-title mb-4">GET IN TOUCH WITH US</h2>
@@ -29,12 +29,13 @@
                             <div class="col-lg-6">
                                 <div class="contact-item">
                                     <h5 class="title">Address:</h5>
-                                    <p>15 Dadeland Boulevard, Miami,fl, 33156  United States</p>
+                                    <p>405 Lexington Avenue, New York City, NY, 10174</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="contact-item">
                                     <h5 class="title">Contact:</h5>
+                                    <p class="mb-1">+1 202 734 7483</p>
                                     <p class="mb-0">Info@realestateharefund.com</p>
                                 </div>
                             </div>

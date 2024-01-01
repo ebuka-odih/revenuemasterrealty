@@ -1,5 +1,65 @@
 @extends('admin.layout.app')
 @section('content')
+    <style>
+        .slider {
+            width: 100%;
+            max-width: 800px;
+            height: 350px;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .slide {
+            width: 100%;
+            max-width: 800px;
+            height: 350px;
+            position: absolute;
+            transition: all 0.5s;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            border-radius: 50%;
+            z-index: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            font-size: 18px;
+        }
+
+        .btn:active {
+            transform: scale(1.1);
+        }
+
+        .btn-prev {
+            top: 45%;
+            left: 2%;
+        }
+
+        .btn-next {
+            top: 45%;
+            right: 2%;
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 800px;
+            height: 350px;
+            position: relative;
+            overflow: hidden;  /* <===  */
+            border-radius: 15px;
+        }
+
+    </style>
 
     <div class="nk-content ">
         <div class="container">
@@ -22,41 +82,24 @@
                                 <div class="row pb-5">
                                     <div class="col-lg-6">
                                         <div class="product-gallery me-xl-1 me-xxl-5">
-                                            <div class="slider-init slick-initialized slick-slider" id="sliderFor" data-slick="{&quot;arrows&quot;: false, &quot;fade&quot;: true, &quot;asNavFor&quot;:&quot;#sliderNav&quot;, &quot;slidesToShow&quot;: 1, &quot;slidesToScroll&quot;: 1}">
-                                                <div class="slick-list draggable">
-                                                    <div class="slick-track" style="opacity: 1; width: 3140px;">
-                                                        @foreach ($property->images as $image)
-                                                        <div class="slider-item rounded slick-slide" data-slick-index="{{ $image->id }}" aria-hidden="true" style="width: 628px; position: relative; left: -2512px; top: 0px; z-index: 998; opacity: 0;" tabindex="0">
-                                                            <img src="{{ asset($image->image_path) }}" class="w-100" alt="">
+
+                                            <div class="slider">
+
+                                                @if ($property->images->count() > 0)
+                                                    @foreach ($property->images as $image)
+                                                        <div class="slide">
+                                                        <img  src="{{ asset($image->image_path) }}" alt="Property Image">
                                                         </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
+                                                    @endforeach
+                                                @else
+                                                    <p>No images available for this product.</p>
+                                                @endif
 
-                                            </div><!-- .slider-init -->
-                                            <div class="slider-init slider-nav slick-initialized slick-slider" id="sliderNav" data-slick="{&quot;arrows&quot;: false, &quot;slidesToShow&quot;: 5, &quot;slidesToScroll&quot;: 1, &quot;asNavFor&quot;:&quot;#sliderFor&quot;, &quot;centerMode&quot;:true, &quot;focusOnSelect&quot;: true,
-                                &quot;responsive&quot;:[ {&quot;breakpoint&quot;: 1539,&quot;settings&quot;:{&quot;slidesToShow&quot;: 4}}, {&quot;breakpoint&quot;: 768,&quot;settings&quot;:{&quot;slidesToShow&quot;: 3}}, {&quot;breakpoint&quot;: 420,&quot;settings&quot;:{&quot;slidesToShow&quot;: 2}} ]
-                            }">
-                                                <div class="slick-list draggable" style="padding: 0px 50px;">
-                                                    <div class="slick-track" style="opacity: 1; width: 470px; transform: translate3d(-376px, 0px, 0px);">
+                                                <!-- Control buttons -->
+                                                <button class="btn btn-next">></button>
+                                                <button class="btn btn-prev">< </button>
+                                            </div>
 
-
-                                                            @foreach ($property->images as $image)
-                                                                <div class="slider-item slick-slide slick-current slick-center" data-slick-index="{{ $image->id }}" aria-hidden="true" style="width: 94px;" tabindex="0">
-                                                                    <div class="thumb">
-                                                                        <img src="{{ asset($image->image_path) }}" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            @endforeach
-
-
-                                                    </div>
-                                                </div>
-
-
-
-
-                                            </div><!-- .slider-nav -->
                                         </div><!-- .product-gallery -->
                                     </div><!-- .col -->
                                     <div class="col-lg-6">
@@ -140,4 +183,57 @@
         </div>
     </div>
 
+    <script>
+        "use strict";
+        // Select all slides
+        const slides = document.querySelectorAll(".slide");
+
+        // loop through slides and set each slides translateX
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${indx * 100}%)`;
+        });
+
+        // select next slide button
+        const nextSlide = document.querySelector(".btn-next");
+
+        // current slide counter
+        let curSlide = 0;
+        // maximum number of slides
+        let maxSlide = slides.length - 1;
+
+        // add event listener and navigation functionality
+        nextSlide.addEventListener("click", function () {
+            // check if current slide is the last and reset current slide
+            if (curSlide === maxSlide) {
+                curSlide = 0;
+            } else {
+                curSlide++;
+            }
+
+            //   move slide by -100%
+            slides.forEach((slide, indx) => {
+                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+            });
+        });
+
+        // select next slide button
+        const prevSlide = document.querySelector(".btn-prev");
+
+        // add event listener and navigation functionality
+        prevSlide.addEventListener("click", function () {
+            // check if current slide is the first and reset current slide to last
+            if (curSlide === 0) {
+                curSlide = maxSlide;
+            } else {
+                curSlide--;
+            }
+
+            //   move slide by 100%
+            slides.forEach((slide, indx) => {
+                slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+            });
+        });
+
+
+    </script>
 @endsection
